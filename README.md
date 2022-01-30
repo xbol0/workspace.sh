@@ -6,6 +6,13 @@
 
 - [x] 腾讯云 Ubuntu 18+
 
+### 使用方法
+
+作为初始化脚本或登录服务器后运行：
+
+```shell
+curl -fsSL https://cdn.jsdelivr.net/gh/orzv/workspace.sh/workspace.sh | bash -E -
+```
 
 ### 部署的内容
 
