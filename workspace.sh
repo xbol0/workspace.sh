@@ -35,6 +35,10 @@ curl -fsSL -o myzshrc https://cdn.jsdelivr.net/gh/orzv/workspace.sh/zshrc
 echo 'source ~/myzshrc' >> ~/.zshrc
 echo 'export PATH=$HOME/.deno/bin:$PATH' >> ~/.zshrc
 
+# 添加deno completion
+mkdir ~/.funcs
+deno completions zsh > ~/.funcs/_deno
+
 # 修改ssh默认端口
 sudo chmod 777 /etc/ssh/sshd_config
 sudo echo 'Port 10022' >> /etc/ssh/sshd_config

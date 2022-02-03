@@ -25,4 +25,3 @@ zstyle ':completion:*' menu select
 EDITOR=nvim
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%3~%f%b %F{magenta}%#%f '
 
-# eval "$(deno completions zsh)"
