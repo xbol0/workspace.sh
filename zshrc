@@ -9,6 +9,8 @@ export PATH=/opt/nvim/bin:$PATH
 export PATH=$HOME/.deno/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
+[[ -d ~/workspace.sh/funcs ]] && export FPATH=~/workspace.sh/funcs:$FPATH
+
 # acme.sh
 if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
   eval "$(cat ~/.acme.sh/acme.sh.env)"
@@ -22,7 +24,7 @@ alias ds='du -sh'
 
 autoload -Uz compinit && compinit
 autoload -Uz colors && colors
-autoload gmt
+autoload dotenv
 
 zstyle ':completion:*' menu select
 
@@ -40,5 +42,5 @@ bindkey ';3D' backward-word
 bindkey ';3C' forward-word
 
 export EDITOR=nvim
-PROMPT='%(?.👍.👎%F{204}%?%f) %B%F{cyan}%3~%f%b 🌝 '
-RPROMPT="%F{177}%n%f👈%F{202}%B%m%b%f"
+PROMPT='%B%F{cyan}%3~%f%b %(?.👍.👎%F{204}%?%f) '
+RPROMPT="%F{177}%n%f🌝%F{202}%B%m%b%f"

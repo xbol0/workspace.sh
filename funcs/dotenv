@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+dotenv() {
+  if [[ -f `pwd`/.env ]]; then
+    for var in $(cat `pwd`/.env | grep -v '^#' | xargs); do
+      export $var
+    done
+  else
+    echo "No .env file found"
+    return 1
+  fi
+}
+
+dotenv
