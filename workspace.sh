@@ -20,7 +20,8 @@ sudo mkdir -p /opt/bin
 sudo apt install -y gcc g++ unzip zsh neovim make nodejs
 
 # 下载猫猫
-curl -fsSLO https://mirror.ghproxy.com/github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz
+curl -fsSLO https://mirror.ghproxy.com/github.com/Dreamacro/clash/\
+  releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz
 gunzip clash-linux-amd64-v1.9.0.gz
 sudo mv clash-linux-amd64-v1.9.0 /opt/bin/clash
 sudo chmod +x /opt/bin/clash
