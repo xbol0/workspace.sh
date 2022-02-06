@@ -1,0 +1,30 @@
+env:
+  TERM: xterm-256color
+font:
+  normal:
+    family: BlexMono Nerd Font Mono
+  size: 18.0
+window:
+  dimensions:
+    columns: 110
+    lines: 33
+key_bindings:
+  - { key: Back, action:  ReceiveChar }
+
+cursor:
+  style:
+    shape: Underline
+
+colors:
+  primary:
+    background: '#000000'
+    foreground: '#e0e0e0'
+  normal:
+    black: '#111111'
+    red: '#e04044'
+    green: '#30b741'
+    yellow: '#fcee50'
+    blue: '#5374ef'
+    magenta: '#dc45cd'
+    cyan: '#2fadee'
+    white: '#f2f2f2'
