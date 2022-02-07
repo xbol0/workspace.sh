@@ -11,7 +11,7 @@ export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
 [[ -d ~/workspace.sh/funcs ]] && export FPATH=~/workspace.sh/funcs:$FPATH
 
-deno completions zsh > ~/workspace.sh/_deno
+deno completions zsh > ~/workspace.sh/funcs/_deno
 
 # acme.sh
 if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
