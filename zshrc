@@ -11,6 +11,8 @@ export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
 [[ -d ~/workspace.sh/funcs ]] && export FPATH=~/workspace.sh/funcs:$FPATH
 
+deno completions zsh > ~/workspace.sh/_deno
+
 # acme.sh
 if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
   eval "$(cat ~/.acme.sh/acme.sh.env)"
@@ -38,8 +40,11 @@ else
   fi
 fi
 
+zmodload zsh/complist
+
 bindkey ';3D' backward-word
 bindkey ';3C' forward-word
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 export EDITOR=nvim
 PROMPT='%B%F{cyan}%3~%f%b %(?.👍.👎%F{204}%?%f) '
