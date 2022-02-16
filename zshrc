@@ -18,8 +18,8 @@ if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
   eval "$(cat ~/.acme.sh/acme.sh.env)"
 fi
 
-alias -g ll='ls -lAhG'
-alias -g l='ls -lhG'
+alias -g ll='ls -lAh --color=auto'
+alias -g l='ls -lh --color=auto'
 alias -g vi='nvim'
 [ -d ~/Desktop ] && alias d='cd ~/Desktop'
 alias ds='du -sh'
