@@ -10,6 +10,7 @@ export PATH=$HOME/.deno/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
 [[ -d ~/workspace.sh/funcs ]] && export FPATH=~/workspace.sh/funcs:$FPATH
+[[ -d ~/go/bin ]] && export PATH=~/go/bin:$PATH
 
 # acme.sh
 if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
@@ -28,8 +29,6 @@ autoload dotenv
 
 source ~/workspace.sh/zsh/completion.zsh
 
-bindkey ';3D' backward-word
-bindkey ';3C' forward-word
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 export EDITOR=nvim
