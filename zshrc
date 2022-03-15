@@ -22,6 +22,7 @@ alias -g l='ls -lh --color=auto'
 alias -g vi='nvim'
 [ -d ~/Desktop ] && alias d='cd ~/Desktop'
 alias ds='du -sh'
+[[ -n $(command -v tmux) ]] && alias tma='tmux attach'
 
 autoload -Uz compinit && compinit -u
 autoload -Uz colors && colors
