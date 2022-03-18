@@ -10,7 +10,9 @@ export PATH=$HOME/.deno/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
 [[ -d ~/workspace.sh/funcs ]] && export FPATH=~/workspace.sh/funcs:$FPATH
+[[ -d ~/.funcs ]] && export FPATH=~/.funcs:$FPATH
 [[ -d ~/go/bin ]] && export PATH=~/go/bin:$PATH
+[[ -d ~/.cargo ]] && source ~/.cargo/env
 
 # acme.sh
 if [[ -e ~/.acme.sh && -f ~/.acme.sh/acme.sh.env ]]; then
@@ -33,5 +35,5 @@ source ~/workspace.sh/zsh/completion.zsh
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 export EDITOR=nvim
-PROMPT='%B%F{25}%3~%f%b %(?.👍.👎%F{204}%?%f) '
-RPROMPT="%F{126}%n%f🌝%F{202}%B%m%b%f"
+PROMPT='%F{126}%n%f %B%F{25}%3~%f%b %(?.👍.👎%F{204}%?%f) '
+# RPROMPT="%F{202}%B%m%b%f"
