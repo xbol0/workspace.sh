@@ -6,6 +6,7 @@ setopt correct
 
 # PATH
 export PATH="$HOME/.local/opt/nvim/bin:$PATH"
+export PATH="$HOME/.local/opt/go/bin:$PATH"
 export PATH=$HOME/.deno/bin:$PATH
 export PATH=~/go/bin:$PATH
 
